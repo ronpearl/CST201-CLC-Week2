@@ -32,6 +32,19 @@ void LinkedList::addToEnd(int val) {
 	temp2->next = temp;
 }
 
+LinkedList* LinkedList::makeCopy() {
+	LinkedList *curr = head;	// point to head
+	LinkedList *copy = new LinkedList();
+
+	while (curr != NULL) {
+		copy->addToEnd(curr->data);		// Add the val from the current linked list to new linked list
+		
+		curr = curr->next;
+	}
+
+	return copy;
+}
+
 /**
 * Insert data at the beginning of the list
 *

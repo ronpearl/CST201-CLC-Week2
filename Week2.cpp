@@ -29,12 +29,15 @@ int main()
 
 	list2->insertAtPosition(18, 3);
 	list2->print();
-
-
+	
 	// Append lists
 	std::cout << "\nAppending lists: " << std::endl;
 	list1->appendLists(list2);
 	list1->print();
+
+	// Make copy of a list
+	LinkedList *copy = list1->makeCopy();
+	copy->print();
 
     return 0;
 }
