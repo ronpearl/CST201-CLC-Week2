@@ -7,26 +7,33 @@
 
 int main()
 {
+	// Create two linked lists
 	LinkedList *list1 = new LinkedList();
 	LinkedList *list2 = new LinkedList();
 
+	// Adding integers to the end of list 1
 	list1->addToEnd(5);
 	list1->addToEnd(2);
 	list1->print();
 
+	// Adding integers to the end of list 2
 	list2->addToEnd(20);
 	list2->addToEnd(36);
 	list2->print();
 
+	// Inserting an integer to the beginning of list 1
 	list1->insertAtBeginning(10);
 	list1->print();
 
+	// Inserting an integer to the beginning of list 2
 	list2->insertAtBeginning(8);
 	list2->print();
 
+	// Remove integer from first position
 	list2->removeAtPosition(1);
 	list2->print();
 
+	// Insert integer at 3rd position
 	list2->insertAtPosition(18, 3);
 	list2->print();
 	
@@ -40,7 +47,8 @@ int main()
 	LinkedList *copy = list1->makeCopy();
 	copy->print();
 
-	std::cout << "\nReverse the linst: " << std::endl;
+	// Reverse the list
+	std::cout << "\nReverse the list: " << std::endl;
 	copy->reverseList();
 	copy->print();
     return 0;
