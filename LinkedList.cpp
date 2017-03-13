@@ -138,6 +138,27 @@ void LinkedList::appendLists(LinkedList *toAppend) {
 	thisList->next = newList;
 }
 
+void LinkedList::reverseList() {
+	if (head == NULL) 
+		return;
+
+	// Assign pointers for positions
+	LinkedList *prev = NULL;
+	LinkedList *curr = head;
+	LinkedList *next = NULL;
+
+	// Iterate through curr in order to update pointers for prev and next
+	while (curr != NULL) {
+		next = curr->next;	
+		curr->next = prev;
+		prev = curr;
+		curr = next;
+	}
+
+	// Assign head to prev
+	head = prev;
+}
+
 /**
 * Print out items in the list
 */

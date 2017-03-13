@@ -16,6 +16,7 @@ public:
 	void removeAtPosition(int pos);
 	void insertAtPosition(int val, int pos);
 	void appendLists(LinkedList * toAppend);
+	void reverseList();
 	void print();
 	
 };

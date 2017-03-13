@@ -36,9 +36,13 @@ int main()
 	list1->print();
 
 	// Make copy of a list
+	std::cout << "\nMake copy of lists: " << std::endl;
 	LinkedList *copy = list1->makeCopy();
 	copy->print();
 
+	std::cout << "\nReverse the linst: " << std::endl;
+	copy->reverseList();
+	copy->print();
     return 0;
 }
 
